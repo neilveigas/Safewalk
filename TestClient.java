@@ -1,35 +1,4 @@
-/**
- * Note
- * ====
- * This file is NOT a model for any of the programs in your solution --
- * it is merely a way to test your Server implementation without having to open
- * multiple terminals or Android applications.
- *
- * Purpose
- * =======
- * This program is a simple test client you may use to send messages from
- * different channels to a server. You may enter messages (one per line), which
- * will each be sent to the server from a newly-instantiated channel.
- *
- * Simple Usage
- * ============
- * java TestClient <address> <port>
- * Example:
- *          $ java TestClient localhost 9001
- * [stdin]  REQUEST EE EMERGENCY
- * [stdout] [Client   0]    Sending to server: REQUEST EE EMERGENCY
- * [stdin]  VOLUNTEER LWSN
- * [stdout] [Client   1]    Sending to server: VOLUNTEER LWSN
- * [stdout] [Client   0] Received from server: VOLUNTEER 1 4
- * [stdout] [Client   1] Received from server: LOCATION EE EMERGENCY
- *
- * Input from File
- * ===============
- * If you would like to use messages from a file, you can use stream
- * redirection. Example:
- *
- * $ java TestClient localhost 9001 < mymessages.txt
- */
+
 package safewalk;
 import edu.purdue.cs.cs180.channel.*;
 import java.util.*;
