@@ -7,20 +7,20 @@ import edu.purdue.cs.cs180.channel.*;
 
 public class Requester implements MessageListener {
 
-	Channel sturridge;
-	boolean benzema = false;
+	Channel st;
+	boolean be = false;
 	Scanner s = new Scanner(System.in);
 
-	public Requester(Channel sturridge)
+	public Requester(Channel st)
 	{
-		this.sturridge = sturridge;
-		sturridge.setMessageListener(this);
+		this.st = st;
+		st.setMessageListener(this);
 		action();
 		//int i = 0;
 		//    String input = null;
 		//    Scanner s = new Scanner(System.in);
 		//    while (true) {
-		//      if (benzema == false) {
+		//      if (be == false) {
 		//        menu();
 		//        System.out.printf("Enter your location (1-5): ");
 		//        
@@ -34,11 +34,11 @@ public class Requester implements MessageListener {
 		//          {
 		//            String loc = locationAb(numInput);
 		//            String messg = "REQUEST " + loc;
-		//            /////this needs to be a requester object, but where do we make the object?
+		//            
 		//            System.out.printf("Waiting for volunteer...\n");
-		//            benzema = true;
+		//            be = true;
 		//            try{
-		//              sturridge.sendMessage(messg); 
+		//              st.sendMessage(messg); 
 		//              //break;
 		//            } catch(ChannelException e){
 		//              e.printStackTrace();
@@ -116,7 +116,7 @@ public class Requester implements MessageListener {
 	//        // send a message, since we did not specify a client ID, then the
 	//        // message will be sent to the server.
 	//        try {
-	//            drogba.sendMessage(message);
+	//            dr.sendMessage(message);
 	//        } catch (ChannelException e) {
 	//            e.printStackTrace();
 	//        }
@@ -143,7 +143,7 @@ public class Requester implements MessageListener {
 						/////this needs to be a requester object, but where do we make the object?
 						System.out.printf("Waiting for volunteer...\n");
 						try {
-							sturridge.sendMessage(messg); 
+							st.sendMessage(messg); 
 							break;
 						} catch (ChannelException e) {
 							e.printStackTrace();
@@ -177,8 +177,8 @@ public class Requester implements MessageListener {
 	public static void main(String[] args)
 	{
 		try {
-			Channel neymar = new TCPChannel(args[0], Integer.parseInt(args[1]));
-			new Requester(neymar);
+			Channel ne = new TCPChannel(args[0], Integer.parseInt(args[1]));
+			new Requester(ne);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
