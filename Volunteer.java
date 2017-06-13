@@ -22,7 +22,6 @@ public class Volunteer implements MessageListener {
 		System.out.printf("Proceed to %s\n", bldg);
 		action();
 		//System.out.println(" in received " + iz);
-		// TODO Auto-generated method stub
 
 	}
 	
