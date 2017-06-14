@@ -11,15 +11,15 @@ public class Server implements MessageListener {
 	LinkedList<String> urges = new LinkedList<String>();
 	LinkedList<Integer> reqid = new LinkedList<Integer>();
 	LinkedList<Integer> volid = new LinkedList<Integer>();
-	Channel forlan = null;
+	Channel lan = null;
 	int inter;
 	Object lock = new Object();
 
-	public Server(Channel forlan, int inter)
+	public Server(Channel lan, int inter)
 	{
 		this.inter = inter;
-		this.forlan = forlan;
-		forlan.setMessageListener(this);
+		this.lan = lan;
+		lan.setMessageListener(this);
 	}
 
 	@Override
