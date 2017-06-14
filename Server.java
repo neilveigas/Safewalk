@@ -1,8 +1,3 @@
-/**
- * Project 6
- * @author nveigas
- * @author jfoeh
- */
 
 package safewalk;
 import java.util.*;
